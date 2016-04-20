@@ -1,7 +1,9 @@
 ---
 title: "ggplot2 starters"
 author: "Dumky de Wilde"
-output: html_document
+output: 
+  html_document: 
+    self_contained: no
 ---
 
 This document is an attempt to set up some basic graph elements for ggplot2 that can be copied and pasted easily when creating new plots and graphs.
