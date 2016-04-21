@@ -1,27 +1,25 @@
 ---
 title: "ggplot2 starters"
 author: "Dumky de Wilde"
-output: 
-  html_document: 
-    self_contained: no
+output: md_document
 ---
 
 This document is an attempt to set up some basic graph elements for ggplot2 that can be copied and pasted easily when creating new plots and graphs.
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(comment=NA, fig.width=8, fig.height=6, 
-                      fig.align="center", warning=FALSE)
-```
-
-Let's start with the basics:
-
-```{r, echo=TRUE}
-#libraries:
 library("ggplot2")
 library("RColorBrewer")
 library("stringr")
 library("tidyr")
-library("reshape2")
+library("knitr")
+
+opts_chunk$set(comment=NA, fig.width=8, fig.height=6,
+               fig.path='figures/', warning=FALSE)
+```
+
+Let's start with the basics:
+
+```{r 001_plot }
 
 p <- ggplot(cars, aes(speed, dist)) +
   geom_point() +
@@ -33,7 +31,7 @@ p #And plot it
 ##Background and axes
 Now let's make it a little nicer and set up the background and axes
 
-```{r background}
+```{r 002_background}
 
 bg_and_axes <-  theme(
   panel.background = element_rect(fill = NA),
@@ -55,7 +53,7 @@ p + bg_and_axes
 ##Scales
 Set the scales properly:
 
-```{r }
+```{r 003_scales}
 p2 <- p + bg_and_axes + 
   scale_y_continuous(limits = c(0,125), breaks = seq(0,125,25), expand = c(0,0)) +
   scale_x_continuous(limits = c(0,27), breaks = seq(0,25,5), expand = c(0,0))
@@ -66,7 +64,7 @@ p2 #And plot our new graph
 ##Bars and colors
 Now to some bar charts and colors. I like the spectral color set because it is easy to tell the colors apart, and works for the color blind too, but it still has the feeling of matching colors.
 
-```{r}
+```{r 004_bars_and_colors}
 p3 <- ggplot(data = diamonds, aes(color, ..count.., fill=cut)) +
   geom_bar() +
   bg_and_axes +
@@ -89,7 +87,7 @@ p3 +
 
 Now let's go from stacked bars to non-stacked, and flip 'm over, because I always favor horizontal bars instead of vertical. It makes for easier comparison, especially for longer lists, and improves readability of the label text. Let's take a different data set and you'll see what I mean.
 
-```{r fig.height=7}
+```{r 005_horizontal_bars, fig.height=7}
 #Make sure we have some long label names so you'll see how they wrap.
 msleep["full_name"] <- paste(msleep$name, ", also known as: ", 
                              msleep$genus, msleep$order, sep = " ")
