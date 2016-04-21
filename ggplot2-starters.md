@@ -10,7 +10,7 @@ Let's start with the basics:
 
     p #And plot it
 
-![](figures/001_plot-1.png)<!-- -->
+![](figures/001_plot-1.png)
 
 Background and axes
 -------------------
@@ -33,7 +33,7 @@ Now let's make it a little nicer and set up the background and axes
 
     p + bg_and_axes
 
-![](figures/002_background-1.png)<!-- -->
+![](figures/002_background-1.png)
 
 Scales
 ------
@@ -46,7 +46,7 @@ Set the scales properly:
 
     p2 #And plot our new graph
 
-![](figures/003_scales-1.png)<!-- -->
+![](figures/003_scales-1.png)
 
 Bars and colors
 ---------------
@@ -74,7 +74,7 @@ but it still has the feeling of matching colors.
       legend_opts +
       scale_fill_brewer(palette = "Spectral", direction = -1)
 
-![](figures/004_bars_and_colors-1.png)<!-- -->
+![](figures/004_bars_and_colors-1.png)
 
 Now let's go from stacked bars to non-stacked, and flip 'm over, because
 I always favor horizontal bars instead of vertical. It makes for easier
@@ -96,4 +96,4 @@ label text. Let's take a different data set and you'll see what I mean.
       bg_and_axes +
       ggtitle("Sleep times of primates")
 
-![](figures/005_horizontal_bars-1.png)<!-- -->
+![](figures/005_horizontal_bars-1.png)
