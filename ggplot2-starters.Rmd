@@ -15,7 +15,7 @@ library("dplyr")
 library("knitr")
 
 #Knitr options
-opts_chunk$set(comment=NA, fig.width=8, fig.height=6,
+opts_chunk$set(fig.width=8, fig.height=6,
                fig.path='figures/', warning=FALSE)
 ```
 
@@ -111,6 +111,7 @@ p4 +
     axis.title.y = element_blank())
 ```
 
+##Heatmaps
 Next up is one of my favorite plots, the heatmap. A heatmap can be a great way to spot patterns in your data. It's usually the count, mean, or density of two categorical variables. I like plotting labels on the tiles of the heatmap because it can give the viewer a better understanding of the scope we're dealing with. A contrast in color helps to spot patterns, but it can mean a variety of things, which is why you often need to give some more context.
 
 ```{r 006_heatmap}

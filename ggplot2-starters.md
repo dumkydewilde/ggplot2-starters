@@ -106,6 +106,9 @@ example.
 
 ![](figures/005_horizontal_bars-1.png)<!-- -->
 
+Heatmaps
+--------
+
 Next up is one of my favorite plots, the heatmap. A heatmap can be a
 great way to spot patterns in your data. It's usually the count, mean,
 or density of two categorical variables. I like plotting labels on the
