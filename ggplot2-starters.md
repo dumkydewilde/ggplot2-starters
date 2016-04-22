@@ -10,7 +10,7 @@ Let's start with the basics:
 
     p #And plot it
 
-![](figures/001_plot-1.png)
+![](figures/001_plot-1.png)<!-- -->
 
 Background and axes
 -------------------
@@ -33,7 +33,7 @@ Now let's make it a little nicer and set up the background and axes
 
     p + bg_and_axes
 
-![](figures/002_background-1.png)
+![](figures/002_background-1.png)<!-- -->
 
 Scales
 ------
@@ -46,7 +46,7 @@ Set the scales properly:
 
     p2 #And plot our new graph
 
-![](figures/003_scales-1.png)
+![](figures/003_scales-1.png)<!-- -->
 
 Bars and colors
 ---------------
@@ -74,7 +74,7 @@ but it still has the feeling of matching colors.
       legend_opts +
       scale_fill_brewer(palette = "Spectral", direction = -1)
 
-![](figures/004_bars_and_colors-1.png)
+![](figures/004_bars_and_colors-1.png)<!-- -->
 
 Now let's go from stacked bars to non-stacked, and flip 'm over, because
 I always favor horizontal bars instead of vertical. It makes for easier
@@ -104,7 +104,6 @@ example.
         panel.grid.major.y = element_blank(),
         axis.title.y = element_blank())
 
-<<<<<<< HEAD
 ![](figures/005_horizontal_bars-1.png)<!-- -->
 
 Next up is one of my favorite plots, the heatmap. A heatmap can be a
@@ -164,6 +163,3 @@ easily compare the two visually.
       facet_options
 
 ![](figures/007_heatmap_male_female-1.png)<!-- -->
-=======
-![](figures/005_horizontal_bars-1.png)
->>>>>>> 8c04d6a96e17f2d3ae16f5ab43b30dd8c53c8f49
